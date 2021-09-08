@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {Search} from "@material-ui/icons"
 
 const Container = styled.div`
   height: 60px;
@@ -16,8 +17,12 @@ const Left = styled.div`
 `;
 
 
-const Language = styled.span``;
-const SearchContainer = styled.span``;
+const Language = styled.span`
+font-size: 14px;
+cursor: pointer;
+`;
+const SearchContainer = styled.span`
+`;
 
 const Center = styled.div`
   flex: 1;
@@ -31,8 +36,10 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-            <Language>En</Language>
-            <SearchContainer>En</SearchContainer>
+            <Language>E              n</Language>
+            <SearchContainer>
+              <Search/>
+            </SearchContainer>
         </Left>
         <Center>center</Center>
         <Right>right</Right>
