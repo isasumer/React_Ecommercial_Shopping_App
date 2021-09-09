@@ -7,6 +7,7 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   position: relative;
+  overflow:hidden;
 `;
 const Arrow = styled.div`
   width: 50px;
@@ -16,7 +17,6 @@ const Arrow = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
   position: absolute;
   top: 0;
   bottom: 0;
@@ -25,16 +25,20 @@ const Arrow = styled.div`
   right: ${(props) => props.direction === "right" && "10px"};
   cursor: pointer;
   opacity: 0.5;
+  z-index:2;
 `;
 
 const Wrapper = styled.div`
   height: 100%;
+  display:flex;
+  transform:translateX(0vw);
 `;
 const Slide = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
+  background-color: ${props => props.bg};
 `;
 const ImgContainer = styled.div`
   height: 100%;
@@ -56,7 +60,7 @@ const Desc = styled.p`
   margin: 50px 0px;
   font-size: 20px;
   font-weight: 500;
-  letter-spacing: 3px; ;
+  letter-spacing: 3px; 
 `;
 const Button = styled.button`
   padding: 10px;
@@ -66,13 +70,16 @@ const Button = styled.button`
 `;
 
 const Slider = () => {
+  const [slideIn]
+const handleClick = (direction) => 
+
   return (
     <Container>
-      <Arrow direction="left">
+      <Arrow direction="left" onClick={()=>handeClick("left")}>
         <ArrowLeftOutlined />
       </Arrow>
       <Wrapper>
-        <Slide>
+        <Slide bg="#a3dcff">
           <ImgContainer>
             <Image src="https://i.ibb.co/XsdmR2c/1.png"></Image>
           </ImgContainer>
@@ -87,7 +94,7 @@ const Slider = () => {
           <InfoContainer></InfoContainer>
         </Slide>
       </Wrapper>
-      <Arrow direction="right">
+      <Arrow direction="right" onClick={()=>handleClick("right")}>
         <ArrowRightOutlined />
       </Arrow>
     </Container>
