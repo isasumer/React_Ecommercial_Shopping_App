@@ -4,9 +4,11 @@ const Container = styled.div`
 height:30px;
 background-color: teal;
 color:white;
-text-align:center;
+justify-content: center;
+display:flex;
 font-size: 14px;
 font-weight: 500;
+align-items: center;
 `;
 
 
