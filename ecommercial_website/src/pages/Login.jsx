@@ -38,7 +38,7 @@ const Input = styled.input`
 `;
 
 const Link = styled.a`
-  margin: 5px 0px;
+  margin-top: 10px;
   font-size: 12px;
   text-decoration: underline;
   cursor: pointer;
