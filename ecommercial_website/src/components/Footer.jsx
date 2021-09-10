@@ -2,44 +2,73 @@ import {
   Facebook,
   Instagram,
   LinkedIn,
+  MailOutline,
+  Phone,
   Pinterest,
+  Room,
   Twitter,
 } from "@material-ui/icons";
 import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
-  flex-direction: row;
 `;
 
 const Left = styled.div`
   flex: 1;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  padding: 20px;
 `;
-const Logo = styled.div`
-  flex: 1;
-
-`;
+const Logo = styled.h1``;
 const Desc = styled.div`
-  flex: 5;
-
+  margin: 20px 0;
 `;
 const SocialContainer = styled.div`
-  flex: 2;
-
-   display: flex;
-  flex-direction: row;
+  display: flex;
 `;
 
 const SocialIcon = styled.div`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  background-color: #${(props) => props.color};
   display: flex;
-`;
-const Right = styled.div`
-  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 5px;
 `;
 const Center = styled.div`
   flex: 1;
+  padding: 20px;
+`;
+const Title = styled.h1``;
+const List = styled.ul`
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+`;
+const ListItem = styled.li`
+  margin: 10px 0px;
+  width: 50%;
+`;
+
+const Right = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+`;
+const ContactItem = styled.div`
+margin: 10px 0px;
+display: flex;
+justify-content: start;
+align-items:center;
+
+`;
+const Payment = styled.img`
+width:50%;
 `;
 
 const Footer = () => {
@@ -53,25 +82,52 @@ const Footer = () => {
           repellendus?
         </Desc>
         <SocialContainer>
-          <SocialIcon>
+          <SocialIcon color="3b5999">
             <Facebook />
           </SocialIcon>
-          <SocialIcon>
+          <SocialIcon color="E4405F">
             <Instagram />
           </SocialIcon>
-          <SocialIcon>
+          <SocialIcon color="55ACEE">
             <Twitter />
           </SocialIcon>
-          <SocialIcon>
+          <SocialIcon color="E60023">
             <Pinterest />
           </SocialIcon>
-          <SocialIcon>
+          <SocialIcon color="76b5c5">
             <LinkedIn />
           </SocialIcon>
         </SocialContainer>
       </Left>
-      <Center></Center>
-      <Right></Right>
+      <Center>
+        <Title>Useful Links</Title>
+        <List>
+          <ListItem>Home</ListItem>
+          <ListItem>Cart</ListItem>
+          <ListItem>Man Fashion</ListItem>
+          <ListItem>Woman Fashion</ListItem>
+          <ListItem>Accessories</ListItem>
+          <ListItem>My Account</ListItem>
+          <ListItem>Order Tracking</ListItem>
+          <ListItem>Wishlist</ListItem>
+          <ListItem>Wishlist</ListItem>
+          <ListItem>Terms</ListItem>
+        </List>
+      </Center>
+      <Right>
+        <Title>Contact</Title>
+        <ContactItem>
+          <Room style={{marginRight:"10px"}}/> 123, 4.Avenue New York, USA
+        </ContactItem>
+        <ContactItem>
+          <Phone style={{marginRight:"10px"}} />
+          +1 234 56 78
+        </ContactItem>
+        <ContactItem>
+          <MailOutline style={{marginRight:"10px"}}/> contact@compassfull.com
+        </ContactItem>
+        <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
+      </Right>
     </Container>
   );
 };
