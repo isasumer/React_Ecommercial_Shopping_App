@@ -7,3 +7,4 @@ return css`
 }
 `;
 }
+export default mobile;
